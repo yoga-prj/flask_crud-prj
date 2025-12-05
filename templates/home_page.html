@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Database</title>
+        <link rel ="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    </head>
+
+    <body>
+        <div class ="logout-container">
+            <a href="/logout">
+                <button class="logout-btn">Logout</button>
+            </a>
+        </div>
+        <h1 class="title"> Student Database </h1>
+
+        <div class="top-bar">
+            <a href="/add">
+                <button class="add-btn" type="button">Add Student</button>
+            </a>
+
+        </div>
+
+        <div class="page-container">
+            <table class="student-table">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Course</th>
+                    <th>Score</th>
+                    <th>Edit / Delete</th>
+                </tr>
+
+                {% for s in students %}
+                <tr>
+                    <td>{{ s.id }}</td>
+                    <td>{{ s.name }}</td>
+                    <td>{{ s.age }}</td>
+                    <td>{{ s.city }}</td>
+                    <td>{{ s.course }}</td>
+                    <td>{{ s.score }}</td>
+
+                    <td>
+                        <a href="/edit/{{s.id}}">
+                            <button class ="edit-btn">Edit</button>
+                        </a>
+
+                        <a href="/delete/{{s.id}}" onclick="return confirm ('Are u sure want to delete this student records?')">
+                            <button class="delete-btn">Delete</button>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+
+            <div class="pagination">
+                {% if has_prev %}
+                    <a href="/students?page={{page - 1}}" class="page-btn">Previous</a>
+                {% endif %}
+
+                <span class="page-number">Page {{page}}</span>
+
+                {% if has_next %}
+                    <a href="/students?page={{page + 1}}"class="page-btn">Next</a>
+                {% endif %}
+            </div>
+
+        </div>
+    </body>
+</html>

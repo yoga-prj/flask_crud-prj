@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Login</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='login.css')}}">
+    </header>
+
+    <body>
+        <div class="login-container">
+            <h2 class="login-title" >College Login Portal</h2>
+
+            <form action="/login" method="POST" class="login-box">
+                <label>Staff Number:</label>
+                <input type="text" name="staff_no" placeholder="Enter Staff Number" required>
+                <label>Password:</label>
+                <input type="password" name="password" placeholder="Enter your password" required>
+                
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
+    </body>
+</html>

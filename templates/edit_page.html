@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Edit Student</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    </header>
+    <body>
+        <h2 class="edit-title">Edit Student Database</h2>
+        <div class="edit-container">
+            <form action="/edit/{{student.id}}" method="POST" class="form-box">
+                <label>Name:</label>
+                <input type="text" name="name" value="{{student.name}}" required>
+
+                <label>Age:</label>
+                <input type="number" name="age" value="{{student.age}}" required>
+
+                <label>City:</label>
+                <input type="text" name="city" value="{{student.city}}"required>
+
+                <label>Course:</label>
+                <input type="text" name="course" value="{{student.course}}"required>
+
+                <label>Score:</label>
+                <input type="number" name="score" value="{{student.score}}"required>
+
+                <button type="submit" class="submit-btn">Update</button>
+            </form>
+        </div>
+    </body>
+
+</html>

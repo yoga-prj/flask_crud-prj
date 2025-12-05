@@ -1,0 +1,65 @@
+/* Background */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #104e8b, #1976D2);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login container */
+.login-container {
+    width: 350px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+/* Title */
+.login-title {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #104e8b;
+}
+
+/* Form box */
+.login-box label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    color: #333;
+}
+
+.login-box input {
+    width: 93%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.login-box input:focus {
+    border-color: #1976D2;
+}
+
+/* Button */
+.login-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    font-size: 17px;
+    background-color: #1976D2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #125a9c;
+}
