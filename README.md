@@ -1,6 +1,6 @@
 # 🎓 Flask Student Management System
 
-A simple **Flask + MySQL CRUD application** with Login, Session Management, Pagination, and 50+ sample student records.
+A simple **Flask + MySQL CRUD application** along with **Login Authentication, Session Management, Pagination, and over 50+ sample student records.** This project includes features such as **adding, editing, deleting, and viewing student data in a clean UI,** protected pages accessible only after login, and smooth navigation through paginated records. It follows a structured approach using Flask routes, templates, and CSS for UI styling, making it a neat and well-organized project.
 
 ---
 
